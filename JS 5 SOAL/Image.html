@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 Image picker</title>
+</head>
+<body>
+    <style>
+        *{
+
+            margin-top: auto;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value="">-Pilih Hewan-</option>
+        <option value="kucing">Kucing</option>
+        <option value="harimau">Harimau</option>
+        <option value="elang">elang</option>
+        <option value="Gorila">Gorila</option>
+        <option value="panda">Panda</option>
+        <option value="kangguru">Kangguru</option>
+        <option value="kuda">Kuda</option>
+    </select>
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil(){
+            switch (daftar.value) {
+                case "kucing":
+                hasil.innerHTML = '<img src="https://cdns.klimg.com/merdeka.com/i/w/news/2021/07/30/1335527/540x270/mengenal-kucing-siberia-berikut-perbedaannya-dengan-maine-coon.jpg" alt="">'
+                alert("ini adalah gambar Kucing")
+                break;
+
+                case "harimau":
+                hasil.innerHTML = '<img src="https://www.pngfind.com/pngs/m/18-181688_white-tiger-clipart-harimau-animal-clipart-hd-png.png" alt="">'
+                alert("ini adalah gambar Harimau")
+                break;
+
+                case "elang":
+                hasil.innerHTML = '<img src="https://img2.pngdownload.id/20180420/usq/kisspng-bald-eagle-bird-clip-art-5ada1abd1ff121.7415394215242431331309.jpg" alt="">'
+                alert("ini adalah gambar elang")
+                break;
+
+                case "Gorila":
+                hasil.innerHTML = '<img src="https://e7.pngegg.com/pngimages/98/725/png-clipart-gorilla-bwindi-impenetrable-national-park-ape-gorilla-animals-logo.png" alt="">'
+                alert("ini adalah gambar Kelinci")
+                break;
+
+                case "panda":
+                hasil.innerHTML = '<img src="https://www.freepnglogos.com/uploads/panda-png/hungry-panda-eats-spam-google-panda-16.png" alt="">'
+                alert("ini adalah gambar Panda")
+                break;
+
+                case "kangguru":
+                hasil.innerHTML = '<img src="https://www.kindpng.com/picc/m/152-1526095_kangaroo-png-transparent-png.png" alt="">'
+                alert("ini adalah gambar Kangguru")
+                break;
+
+                case "kuda":
+                hasil.innerHTML = '<img src="https://img2.pngdownload.id/20180525/gow/kisspng-american-paint-horse-arabian-horse-thoroughbred-ma-5b07e023797ad6.9410259415272427874976.jpg" alt="">'
+                alert("ini adalah gambar Kuda")
+                break;
+
+                default:
+                    hasil.innerHTML =""
+            }
+        }
+    </script>
+</body>
+</html>
